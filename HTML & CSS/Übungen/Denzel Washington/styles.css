@@ -1,0 +1,69 @@
+header {
+    background-color: #444; /* Hintergrundfarbe des Headers */
+    color: white; /* Textfarbe */
+    padding: 20px; /* Innenabstand */
+    text-align: center; /* Text zentrieren */
+}
+
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    display: flex; /* Flexbox aktivieren */
+    justify-content: center; /* Links zentrieren */
+}
+
+nav ul {
+    list-style-type: none; /* Aufzählungszeichen entfernen */
+    padding: 0; /* Kein Innenpadding */
+    margin: 0; /* Kein äußeres Margin */
+    display: flex; /* Flexbox für die Liste aktivieren */
+}
+
+nav li {
+    margin: 0 20px; /* Abstand links und rechts */
+}
+
+nav a {
+    color: white; /* Textfarbe der Links */
+    text-decoration: none; /* Unterstreichung der Links entfernen */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
+}
+
+.about-container {
+    display: flex; /* Flexbox aktivieren für die Anordnung */
+    align-items: center; /* Vertikal zentrieren */
+}
+
+.about-image {
+    width: 400px; /* Breite des Bildes */
+    height: auto; /* Höhe automatisch anpassen */
+    margin-right: 20px; /* Abstand zwischen Bild und Text */
+}
+
+.about-text {
+    max-width: 600px; /* Maximale Breite des Textes */
+}
+body {
+    font-family: 'Playfair Display', serif; /* Elegante Schriftart */
+}
+
+.about-container {
+    display: flex; /* Flexbox aktivieren für die Anordnung */
+    align-items: flex-start; /* Vertikal oben ausrichten */
+    margin: 20px 0; /* Abstand oben und unten */
+}
+
+.about-image {
+    width: 200px; /* Breite des Bildes */
+    height: auto; /* Höhe automatisch anpassen */
+    margin-left: 20px; /* Abstand zwischen Text und Bild */
+}
+
+.about-text {
+    max-width: 600px; /* Maximale Breite des Textes */
+    line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+}
