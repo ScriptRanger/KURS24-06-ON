@@ -1,0 +1,144 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #d7d7d7;
+}
+
+header {
+    background-color: rgb(52, 52, 52); /* Dunkelgrau für den Hintergrund */
+    color: yellow; /* Gelbe Schrift */
+    padding: 50px 0;
+}
+
+nav {
+    margin-top: 20px; /* Fügt einen Abstand von 20px zwischen der Überschrift und den Links ein */
+}
+
+nav a {
+    color: yellow; /* Gelbe Links */
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 25px;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Unterstreichen beim Hover */
+}
+h1 {
+    margin: 0;
+    font-size: 60px;
+}
+h2 {
+    margin: 30px;
+    font-weight: bold;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.willkommen{
+    font-weight: bold ;
+    font-size: 19px;
+}
+
+main {
+    margin: 20px 0;
+}
+
+h3 {
+    margin: 30px;
+    font-weight: bolder;
+    font-size: 40px; 
+}
+
+ul {
+    list-style-type: disc; /* Standard Punkte */
+    list-style-position: inside; /* Die Punkte stehen innerhalb des Textbereichs */
+    margin: 0 auto; /* Zentriert die gesamte Liste */
+    padding-left: 0; /* Kein zusätzlicher Einzug */
+    width: max-content; /* Passt die Breite an den Inhalt an */
+    text-align: left; /* Stellt sicher, dass der Text linksbündig bleibt */
+    font-size: 20px;
+} 
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.kontakt {
+    font-size: 20px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 60%; /* Passt die Breite an, damit sie nicht die volle Seite einnehmen */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Grauer Rand */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 20px;
+    background-color: #f7f7f7; /* Heller Hintergrund */
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.datenschutz-header {
+    margin: 0;
+    font-size: 60px;
+    color: yellow;
+}
+
+
+.datenschutz-title {
+    font-size: 40px;
+    margin-top: 30px;
+    font-weight: bolder;
+}
+
+
+.datenschutz-subtitle {
+    font-size: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.datenschutz-text {
+    text-align: justify; /* Text innerhalb des Containers bleibt ausgerichtet */
+    margin: 15px auto;
+    max-width: 800px; /* Breite der Texte begrenzen */
+    font-size: 20px;
+}    
+
+footer {
+    background-color: #333;
+    color: yellow; 
+    padding: 20px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+footer nav {
+    margin-top: 10px; 
+}
+
+footer nav a {
+    color: purple;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 25px;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
