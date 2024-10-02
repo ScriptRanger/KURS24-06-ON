@@ -7,24 +7,23 @@ body {
 }
 
 header {
-    background-color: rgb(52, 52, 52); /* Dunkelgrau für den Hintergrund */
-    color: yellow; /* Gelbe Schrift */
-    padding: 50px 0;
+    background-color: rgb(52, 52, 52); 
+    color: yellow; 
 }
 
 nav {
-    margin-top: 20px; /* Fügt einen Abstand von 20px zwischen der Überschrift und den Links ein */
+    margin-top: 20px; 
 }
 
 nav a {
-    color: yellow; /* Gelbe Links */
+    color: yellow; 
     text-decoration: none;
     margin: 0 20px;
     font-size: 25px;
 }
 
 nav a:hover {
-    text-decoration: underline; /* Unterstreichen beim Hover */
+    text-decoration: underline; 
 }
 h1 {
     margin: 0;
@@ -53,12 +52,12 @@ h3 {
 }
 
 ul {
-    list-style-type: disc; /* Standard Punkte */
-    list-style-position: inside; /* Die Punkte stehen innerhalb des Textbereichs */
-    margin: 0 auto; /* Zentriert die gesamte Liste */
-    padding-left: 0; /* Kein zusätzlicher Einzug */
-    width: max-content; /* Passt die Breite an den Inhalt an */
-    text-align: left; /* Stellt sicher, dass der Text linksbündig bleibt */
+    list-style-type: disc; 
+    list-style-position: inside; 
+    margin: 0 auto; 
+    padding-left: 0; 
+    width: max-content; 
+    text-align: left; 
     font-size: 20px;
 } 
 
@@ -72,14 +71,14 @@ ul li {
 }
 
 input[type="text"], input[type="email"], textarea {
-    width: 60%; /* Passt die Breite an, damit sie nicht die volle Seite einnehmen */
+    width: 60%; 
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc; /* Grauer Rand */
+    border: 1px solid #ccc; 
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 20px;
-    background-color: #f7f7f7; /* Heller Hintergrund */
+    background-color: #f7f7f7; 
 }
 
 input[type="submit"] {
@@ -114,10 +113,9 @@ input[type="submit"] {
 }
 
 .datenschutz-text {
-    text-align: justify; /* Text innerhalb des Containers bleibt ausgerichtet */
+    text-align: justify; 
     margin: 15px auto;
-    max-width: 800px; /* Breite der Texte begrenzen */
-    font-size: 20px;
+    max-width: 800px; /
 }    
 
 footer {
