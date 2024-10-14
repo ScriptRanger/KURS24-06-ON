@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Grundlagen zu Schleifen in JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Grundlagen zu Schleifen in JavaScript</h1>
+    <pre>
+        Schleifen sind eine essenzielle Programmiertechnik, mit der wir Code mehrmals
+        ausführen können. In JavaScript gibt es mehrere Arten von Schleifen, darunter
+        for-Schleifen, while-Schleifen und do...while-Schleifen. Jede hat ihren spezifischen
+        Anwendungsfall.
+
+        1. for-Schleife
+
+        Die for-Schleife wird am häufigsten dann verwendet, wenn die Anzahl der
+        Wiederholungen im Voraus bekannt ist. Sie besteht aus drei Hauptbestandteilen:
+        Initialisierung, Bedingung und das Aktualisieren der Schleifenvariablen.
+
+        <div class="solution">
+        for (let i = 1; i <= 5; i++) {
+            // Code der mehrmals ausgeführt wird
+            console.log(i);
+        }
+        </div>
+
+        Die for-Schleife oben gibt die Zahlen von 1 bis 5 in der Konsole aus.
+
+        2. while-Schleife
+
+        Die while-Schleife wird verwendet, wenn die Anzahl der Wiederholungen nicht im
+        Voraus bekannt ist. Die Schleife wird solange ausgeführt, wie die Bedingung true ist.
+
+        <div class="solution">
+        let i = 1;
+        while (i <= 5) {
+            console.log(i);
+            i++;
+        }
+        </div>
+
+        Die while-Schleife oben gibt ebenfalls die Zahlen von 1 bis 5 in der Konsole aus.
+
+        3. do...while-Schleife
+
+        Die do...while-Schleife ist ähnlich wie die while-Schleife, jedoch wird der Codeblock
+        mindestens einmal ausgeführt, bevor die Bedingung geprüft wird.
+
+        <div class="solution">
+        let i = 1;
+        do {
+            console.log(i);
+            i++;
+        } while (i <= 5);
+        </div>
+
+        Die do...while-Schleife oben gibt ebenfalls die Zahlen von 1 bis 5 in der Konsole aus.
+    </pre>
+</body>
+</html>
