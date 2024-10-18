@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Manipulation Aufgaben</title>
+    <style>
+        .task {
+            margin-bottom: 50px;
+            border-bottom: 2px solid black;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+
+     <!-- Aufgabe 1: Textelement auswählen und ändern -->
+     <h2 id="welcome-text">Willkommen</h2>
+
+     <script>
+         // Warte, bis das Fenster vollständig geladen ist, bevor du den Text änderst
+         window.onload = function() {
+             // Wähle das h2-Element mit der ID "welcome-text" aus
+             const welcomeElement = document.getElementById("welcome-text");
+ 
+             // Ändere den Textinhalt des Elements zu "Herzlich Willkommen!"
+             welcomeElement.textContent = "Herzlich Willkommen!";
+         };
+     </script>
+    </div>
+
+    <!-- Aufgabe 2: Stile ändern -->
+    <div class="task">
+        <h2>Aufgabe 2: Stile ändern</h2>
+        <button id="color-change-btn">Ändere Farbe</button>
+
+        <script>
+            // Wenn auf den Button geklickt wird, ändert sich die Hintergrundfarbe zufällig
+            document.getElementById("color-change-btn").addEventListener("click", function() {
+                const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                this.style.backgroundColor = randomColor;
+            });
+        </script>
+    </div>
+
+    <!-- Aufgabe 3: Liste von Elementen erstellen -->
+    <div class="task">
+        <h2>Aufgabe 3: Liste von Elementen erstellen</h2>
+        <ul id="fruits-list">
+            <li>Apfel</li>
+            <li>Banane</li>
+            <li>Orange</li>
+        </ul>
+
+        <script>
+            // Ändere das zweite Listenelement von "Banane" zu "Mango"
+            const listItems = document.getElementsByTagName("li");
+            listItems[1].textContent = "Mango";
+        </script>
+    </div>
+
+    <!-- Aufgabe 4: Dynamisch ein Element hinzufügen -->
+    <div class="task">
+        <h2>Aufgabe 4: Dynamisch ein Element hinzufügen</h2>
+        <div id="dynamic-div"></div>
+
+        <script>
+            // Erstelle ein neues <p> Element und füge es in die leere <div> ein
+            const newParagraph = document.createElement("p");
+            newParagraph.textContent = "Dies ist ein neuer Absatz";
+            document.getElementById("dynamic-div").appendChild(newParagraph);
+        </script>
+    </div>
+
+    <!-- Aufgabe 5: Element mit einem Event Listener versehen -->
+    <div class="task">
+        <h2>Aufgabe 5: Event Listener hinzufügen</h2>
+        <button id="click-btn">Klick mich</button>
+
+        <script>
+            // Wenn der Button geklickt wird, füge einen neuen Absatz unterhalb hinzu
+            document.getElementById("click-btn").addEventListener("click", function() {
+                const newP = document.createElement("p");
+                newP.textContent = "Button wurde geklickt!";
+                this.after(newP);
+            });
+        </script>
+    </div>
+
+    <!-- Aufgabe 6: Interaktive Farbänderung -->
+    <div class="task">
+        <h2>Aufgabe 6: Interaktive Farbänderung</h2>
+        <div class="box" id="color-box"></div>
+
+        <script>
+            // Ändere die Farbe, wenn die Maus über die Box fährt und verlässt
+            const colorBox = document.getElementById("color-box");
+            colorBox.addEventListener("mouseover", function() {
+                this.style.backgroundColor = "red";
+            });
+            colorBox.addEventListener("mouseout", function() {
+                this.style.backgroundColor = "lightgrey";
+            });
+        </script>
+    </div>
+
+    <!-- Aufgabe 7: Eingabewert auslesen und anzeigen -->
+    <div class="task">
+        <h2>Aufgabe 7: Eingabewert auslesen und anzeigen</h2>
+        <input type="text" id="input-field" placeholder="Gib etwas ein">
+        <button id="submit-btn">Absenden</button>
+
+        <script>
+            // Wenn auf den Button geklickt wird, wird der eingegebene Text angezeigt
+            document.getElementById("submit-btn").addEventListener("click", function() {
+                const inputValue = document.getElementById("input-field").value;
+                const newParagraph = document.createElement("p");
+                newParagraph.textContent = inputValue;
+                this.after(newParagraph);
+            });
+        </script>
+    </div>
+
+    <!-- Aufgabe 8: Elemente anhand von Klasse auswählen und manipulieren -->
+    <div class="task">
+        <h2>Aufgabe 8: Elemente anhand von Klasse auswählen</h2>
+        <div class="box" style="background-color: lightgrey;"></div>
+        <div class="box" style="background-color: lightgrey;"></div>
+        <div class="box" style="background-color: lightgrey;"></div>
+
+        <script>
+            // Wenn auf eine Box geklickt wird, ändern alle Boxen ihre Hintergrundfarbe zu Blau
+            const boxes = document.getElementsByClassName("box");
+            Array.from(boxes).forEach(box => {
+                box.addEventListener("click", function() {
+                    for (let i = 0; i < boxes.length; i++) {
+                        boxes[i].style.backgroundColor = "blue";
+                    }
+                });
+            });
+        </script>
+    </div>
+
+    <!-- Aufgabe 9: Neues Element vor einem bestehenden hinzufügen -->
+    <div class="task">
+        <h2>Aufgabe 9: Neues Element vor einem bestehenden hinzufügen</h2>
+        <ul id="item-list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+
+        <script>
+            // Füge ein neues Listenelement vor dem ersten Listenelement hinzu
+            const newItem = document.createElement("li");
+            newItem.textContent = "Neues Item";
+            const itemList = document.getElementById("item-list");
+            itemList.insertBefore(newItem, itemList.firstChild);
+        </script>
+    </div>
+
+    <!-- Aufgabe 10: Mini-Game: Zufällige Zahlen vergleichen -->
+    <div class="task">
+        <h2>Aufgabe 10: Mini-Game: Zufällige Zahlen vergleichen</h2>
+        <input type="number" id="number-input" min="1" max="10" placeholder="Rate eine Zahl">
+        <button id="check-btn">Überprüfen</button>
+        <p id="result"></p>
+
+        <script>
+            // Erstelle ein Zufallszahlenspiel, um die geratene Zahl zu überprüfen
+            document.getElementById("check-btn").addEventListener("click", function() {
+                const userNumber = parseInt(document.getElementById("number-input").value);
+                const randomNumber = Math.floor(Math.random() * 10) + 1;
+                const resultText = userNumber === randomNumber 
+                    ? "Richtig geraten!" 
+                    : `Falsch, die Zahl war ${randomNumber}`;
+                document.getElementById("result").textContent = resultText;
+            });
+        </script>
+    </div>
+
+</body>
+</html>
