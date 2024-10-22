@@ -1,0 +1,11 @@
+.main-container {
+  background-color: rgb(158, 158, 158);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  flex: 0 1 auto; /* Damit der Footer nur so viel Platz einnimmt, wie er benötigt */
+}
