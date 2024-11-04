@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333333;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.product-details,
+.product-images,
+.buy-button {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+}
+
+.product-details h2 {
+    font-size: 28px; /* Größe für die Überschrift */
+}
+
+.product-details ul li {
+    font-size: 20px; /* Größe für die Listenelemente */
+}
+
+.image-gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.buy-button h2 {
+    font-size: 28px; /* Größe für die Überschrift im Kaufen-Bereich */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #e67e22;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px; /* Größe für den Button-Text */
+}
+
+button:hover {
+    background-color: #d35400; /* Hover-Effekt für den Button */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333333;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles für kleinere Bildschirme */
+@media (max-width: 480px) {
+    .product-details h2 {
+        font-size: 18px; /* Kleinere Schriftgröße für h2 */
+    }
+
+    .product-details ul li {
+        font-size: 14px; /* Kleinere Schriftgröße für li */
+    }
+
+    .image-gallery {
+        flex-direction: column; /* Bilder untereinander anordnen */
+    }
+
+    button {
+        padding: 8px 16px; /* Kleinere Button-Paddings */
+    }
+}

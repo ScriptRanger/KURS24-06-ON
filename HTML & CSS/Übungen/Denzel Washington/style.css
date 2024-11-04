@@ -1,0 +1,84 @@
+body {
+    background-color: #1a1a1a; /* Schwarz */
+    color: white; /* Schriftfarbe */
+    font-family: 'Audrey', sans-serif; /* Schriftart Audrey */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333; /* Dunkelgrau */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid red; /* Rote Umrandung */
+}
+
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f0f0f0; /* Hellerer Farbton beim Hover */
+}
+
+.block {
+    background-color: #2a2a2a; /* Dunkelgrau für die Blöcke */
+    border: 2px solid red; /* Rote Umrandung der Blöcke */
+    padding: 20px;
+    margin: 20px auto; /* Zentriert den Block */
+    max-width: 800px; /* Maximale Breite für mehr Zentrierung */
+    border-radius: 8px; /* Abgerundete Ecken */
+}
+
+.image-row {
+    display: flex;
+    justify-content: center; /* Bilder zentrieren */
+    margin-bottom: 20px; /* Abstand nach unten */
+}
+
+.image-row img,
+.inline-img {
+    max-width: 300px; /* Größe der Bilder */
+    height: auto; /* Höhe automatisch anpassen */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Schatteneffekt für Bilder */
+    margin: 0 10px; /* Abstand zwischen den Bildern */
+    transition: transform 0.3s; /* Übergangseffekt für Hover */
+}
+
+.image-row img:hover,
+.inline-img:hover {
+    transform: scale(1.1); /* Vergrößerungseffekt */
+}
+
+.filme-liste {
+    list-style-type: none; /* Entfernen der Aufzählungszeichen */
+    padding: 0; /* Entfernen der Standard-Padding */
+}
+
+.filme-liste li {
+    margin: 10px 0; /* Abstand zwischen den Listenelementen */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333; /* Dunkelgrau */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #f0f0f0; /* Hellerer Farbton beim Hover */
+}

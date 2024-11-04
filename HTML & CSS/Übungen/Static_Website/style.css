@@ -1,0 +1,26 @@
+body {
+   background-color: bisque; 
+}
+
+h1 {
+    color: brown;
+    text-align: center;
+}
+
+h2{
+    color: rgb(235, 86, 0);
+    text-align: left;
+}
+
+p {
+    font-size: 18px;
+    color: rgb(40, 23, 2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    height: 20%;
+}

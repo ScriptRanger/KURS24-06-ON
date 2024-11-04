@@ -1,0 +1,87 @@
+const readline = require("readline");
+
+// Erstelle das Interface für Eingaben in der Konsole
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+const farben = ["Herz", "Karo", "Pik", "Kreuz"];
+const werte = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Bube", "Dame", "König", "Ass"];
+let deck = [];
+
+// Deck mit Karten erstellen
+farben.forEach(farbe => {
+    werte.forEach(wert => {
+        deck.push({ farbe, wert });
+    });
+});
+
+// Funktion zum Mischen des Decks
+function shuffleDeck() {
+    for (let i = deck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [deck[i], deck[j]] = [deck[j], deck[i]];
+    }
+}
+
+// Funktion zum Ziehen mehrerer Karten
+function drawCards(anzahl) {
+    let gezogeneKarten = [];
+    if (anzahl > deck.length) return "Verloren! Du hast mehr Karten verlangt als verfügbar.";
+    for (let i = 0; i < anzahl; i++) {
+        gezogeneKarten.push(deck.pop());
+    }
+    return gezogeneKarten;
+}
+
+// Funktion zur Eingabeaufforderung
+function frageKartenZiehen(nochImDeck) {
+    rl.question(`\nWie viele Karten von ${nochImDeck} möchtest du ziehen? `, antwort => {
+        const anzahlZiehen = parseInt(antwort);
+        
+        if (anzahlZiehen < 1) {
+            console.log("\nBitte mindestens eine Karte ziehen!");
+            frageKartenZiehen(nochImDeck);
+        } else if (anzahlZiehen > nochImDeck) {
+            console.log("\nVerloren! Du hast mehr Karten verlangt als verfügbar.");
+            nochmalSpielen();
+        } else {
+            const gezogeneKarten = drawCards(anzahlZiehen);
+            console.log("\nGezogene Karten:");
+            gezogeneKarten.forEach(karte => console.log(`- ${karte.wert} von ${karte.farbe}`));
+            console.log(`\nVerbleibende Karten im Deck: ${deck.length}\n`);
+            
+            if (deck.length === 0) {
+                console.log("Gewonnen! Du hast alle Karten gezogen.");
+                nochmalSpielen();
+            } else {
+                frageKartenZiehen(deck.length);
+            }
+        }
+    });
+}
+
+// Funktion "Ende" zur Beendigung des Spiels
+function nochmalSpielen() {
+    rl.question("\nMöchtest du nochmal spielen? (ja/nein) ", antwort => {
+        if (antwort.toLowerCase() === "ja") {
+            startGame();
+        } else {
+            console.log("\nDanke fürs Spielen! Spiel beendet.");
+            rl.close();
+        }
+    });
+}
+
+// Spiel starten
+function startGame() {
+    deck = [];
+    farben.forEach(farbe => werte.forEach(wert => deck.push({ farbe, wert })));
+    shuffleDeck();
+    console.log("\nSpiel gestartet! Es sind 52 Karten im Spiel.");
+    frageKartenZiehen(deck.length);
+}
+
+// Starte das Spiel
+startGame();
